@@ -4,8 +4,8 @@ name: hello_world
 # 触发设置
 on:
   repository_dispatch:
-  release:
-    types: published
+  # release:
+  #   types: published
   # push:
   #   branches:
   #     - master
@@ -14,7 +14,8 @@ on:
   watch:
     types: started
 
-env: USERNAME:${{secrets.USERNAME}}
+env:
+  USERNAME: ${{secrets.USERNAME}}
 
 jobs:
   build:
